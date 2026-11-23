@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "category_id": 1,
+    "name": "Chăm sóc da mặt cơ bản",
+    "description": "Tẩy trang, rửa mặt, tẩy tế bào chết nhẹ và đắp mặt nạ phù hợp với da.",
+    "price": 250000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 2,
+    "category_id": 1,
+    "name": "Chăm sóc da cấp ẩm",
+    "description": "Làm sạch, bổ sung dưỡng chất cấp ẩm và đắp mặt nạ dưỡng ẩm.",
+    "price": 350000,
+    "duration_minutes": 60
+  },
+  {
+    "id": 3,
+    "category_id": 1,
+    "name": "Chăm sóc da dịu nhẹ",
+    "description": "Làm sạch nhẹ nhàng và sử dụng sản phẩm chăm sóc phù hợp cho da nhạy cảm.",
+    "price": 380000,
+    "duration_minutes": 60
+  },
+  {
+    "id": 4,
+    "category_id": 1,
+    "name": "Massage mặt thư giãn",
+    "description": "Làm sạch da, massage mặt và kết thúc bằng mặt nạ dưỡng da.",
+    "price": 300000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 5,
+    "category_id": 2,
+    "name": "Tẩy tế bào chết toàn thân",
+    "description": "Làm sạch, tẩy tế bào chết toàn thân và thoa dưỡng ẩm.",
+    "price": 350000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 6,
+    "category_id": 2,
+    "name": "Ủ dưỡng thể",
+    "description": "Ủ dưỡng chất chăm sóc da cơ thể và thoa kem dưỡng sau khi làm sạch.",
+    "price": 450000,
+    "duration_minutes": 60
+  },
+  {
+    "id": 7,
+    "category_id": 2,
+    "name": "Chăm sóc da lưng",
+    "description": "Làm sạch vùng lưng, tẩy tế bào chết nhẹ và đắp mặt nạ dưỡng da.",
+    "price": 300000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 8,
+    "category_id": 2,
+    "name": "Dưỡng ẩm toàn thân",
+    "description": "Làm sạch và thoa dưỡng chất cấp ẩm kết hợp massage nhẹ toàn thân.",
+    "price": 400000,
+    "duration_minutes": 60
+  },
+  {
+    "id": 9,
+    "category_id": 3,
+    "name": "Massage toàn thân tinh dầu",
+    "description": "Massage toàn thân với tinh dầu giúp khách hàng thư giãn.",
+    "price": 450000,
+    "duration_minutes": 60
+  },
+  {
+    "id": 10,
+    "category_id": 3,
+    "name": "Massage đá nóng",
+    "description": "Massage thư giãn kết hợp đá ấm với nhiệt độ phù hợp.",
+    "price": 550000,
+    "duration_minutes": 75
+  },
+  {
+    "id": 11,
+    "category_id": 3,
+    "name": "Massage cổ vai gáy",
+    "description": "Massage nhẹ vùng cổ, vai và gáy theo mức lực khách hàng lựa chọn.",
+    "price": 250000,
+    "duration_minutes": 30
+  },
+  {
+    "id": 12,
+    "category_id": 3,
+    "name": "Massage lưng thư giãn",
+    "description": "Massage tập trung vùng lưng kết hợp tinh dầu.",
+    "price": 300000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 13,
+    "category_id": 4,
+    "name": "Ngâm chân thảo mộc",
+    "description": "Ngâm chân bằng nước ấm thảo mộc và lau khô sau dịch vụ.",
+    "price": 120000,
+    "duration_minutes": 20
+  },
+  {
+    "id": 14,
+    "category_id": 4,
+    "name": "Massage bàn chân",
+    "description": "Làm sạch và massage bàn chân với kem dưỡng.",
+    "price": 200000,
+    "duration_minutes": 30
+  },
+  {
+    "id": 15,
+    "category_id": 4,
+    "name": "Tẩy tế bào chết bàn chân",
+    "description": "Ngâm chân, tẩy tế bào chết nhẹ và thoa dưỡng ẩm bàn chân.",
+    "price": 180000,
+    "duration_minutes": 30
+  },
+  {
+    "id": 16,
+    "category_id": 4,
+    "name": "Chăm sóc chân toàn diện",
+    "description": "Ngâm chân, tẩy tế bào chết, massage và ủ dưỡng bàn chân.",
+    "price": 350000,
+    "duration_minutes": 60
+  },
+  {
+    "id": 17,
+    "category_id": 5,
+    "name": "Gội đầu thư giãn",
+    "description": "Gội sạch tóc, massage da đầu và sấy khô.",
+    "price": 120000,
+    "duration_minutes": 30
+  },
+  {
+    "id": 18,
+    "category_id": 5,
+    "name": "Gội đầu dưỡng sinh",
+    "description": "Gội đầu kết hợp massage da đầu, cổ và vai nhẹ nhàng.",
+    "price": 220000,
+    "duration_minutes": 60
+  },
+  {
+    "id": 19,
+    "category_id": 5,
+    "name": "Ủ dưỡng tóc",
+    "description": "Gội đầu, ủ dưỡng tóc và sấy khô.",
+    "price": 250000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 20,
+    "category_id": 5,
+    "name": "Chăm sóc da đầu",
+    "description": "Làm sạch da đầu và massage nhẹ với sản phẩm phù hợp.",
+    "price": 280000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 21,
+    "category_id": 6,
+    "name": "Wax lông nách",
+    "description": "Làm sạch vùng nách, wax lông và thoa sản phẩm làm dịu da.",
+    "price": 120000,
+    "duration_minutes": 20
+  },
+  {
+    "id": 22,
+    "category_id": 6,
+    "name": "Wax lông tay",
+    "description": "Wax lông hai tay và chăm sóc da sau dịch vụ.",
+    "price": 250000,
+    "duration_minutes": 30
+  },
+  {
+    "id": 23,
+    "category_id": 6,
+    "name": "Wax lông nửa chân",
+    "description": "Wax lông vùng từ đầu gối xuống cổ chân và làm dịu da.",
+    "price": 250000,
+    "duration_minutes": 30
+  },
+  {
+    "id": 24,
+    "category_id": 6,
+    "name": "Wax lông toàn chân",
+    "description": "Wax lông hai chân và chăm sóc da sau dịch vụ.",
+    "price": 400000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 25,
+    "category_id": 7,
+    "name": "Chăm sóc móng tay cơ bản",
+    "description": "Vệ sinh, cắt và tạo dáng móng tay, kết thúc bằng dưỡng móng.",
+    "price": 100000,
+    "duration_minutes": 30
+  },
+  {
+    "id": 26,
+    "category_id": 7,
+    "name": "Chăm sóc móng chân cơ bản",
+    "description": "Vệ sinh, cắt và tạo dáng móng chân, kết thúc bằng dưỡng móng.",
+    "price": 120000,
+    "duration_minutes": 30
+  },
+  {
+    "id": 27,
+    "category_id": 7,
+    "name": "Sơn gel móng tay",
+    "description": "Vệ sinh, tạo dáng và sơn gel một màu cho móng tay.",
+    "price": 200000,
+    "duration_minutes": 45
+  },
+  {
+    "id": 28,
+    "category_id": 7,
+    "name": "Sơn gel móng chân",
+    "description": "Vệ sinh, tạo dáng và sơn gel một màu cho móng chân.",
+    "price": 220000,
+    "duration_minutes": 45
+  }
+]

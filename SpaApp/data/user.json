@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "username": "manager",
+    "password": "e9ee4799caea687bd930e2f5b63acf6c",
+    "fullname": "Nguyễn Minh Anh",
+    "role": "MANAGER",
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "username": "receptionist",
+    "password": "e9ee4799caea687bd930e2f5b63acf6c",
+    "fullname": "Trần Ngọc Linh",
+    "role": "RECEPTIONIST",
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "username": "technician",
+    "password": "e9ee4799caea687bd930e2f5b63acf6c",
+    "fullname": "Lê Thảo Vy",
+    "role": "TECHNICIAN",
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "username": "cashier",
+    "password": "e9ee4799caea687bd930e2f5b63acf6c",
+    "fullname": "Phạm Hoàng Nam",
+    "role": "CASHIER",
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "username": "customer",
+    "password": "e9ee4799caea687bd930e2f5b63acf6c",
+    "fullname": "Võ Mai Phương",
+    "role": "CUSTOMER",
+    "is_active": true
+  }
+]
