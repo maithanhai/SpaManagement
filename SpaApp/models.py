@@ -1,4 +1,6 @@
 import enum
+import hashlib
+import json
 
 from flask_login import UserMixin
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Enum, Boolean, DateTime, CheckConstraint
@@ -49,7 +51,7 @@ class Service(db.Model):
     id = Column(Integer, primary_key=True, autoincrement=True)
     category_id = Column(Integer, ForeignKey('category.id'), nullable=False)
     name = Column(String(100), nullable=False)
-    description = Column(String(255), nullable=True)
+    description = Column(String(500), nullable=True)
     price = Column(Float, nullable=False)
     duration_minutes = Column(Integer, nullable=False)
     image = Column(String(255), default="https://res.cloudinary.com/ducouuixg/image/upload/f_auto/q_auto/782936ea-9d24-4d10-a669-36d10bf012fe.png")
@@ -149,6 +151,27 @@ if __name__=='__main__':
     with app.app_context():
         db.drop_all()
         db.create_all()
+        with open("data/categories.json", encoding="utf-8") as f:
+            cates = json.load(f)
+            for c in cates:
+                db.session.add(Category(**c))
+        with open("data/services.json", encoding="utf-8") as f:
+            services = json.load(f)
+            for s in services:
+                db.session.add(Service(**s))
+        with open("data/users.json", encoding="utf-8") as f:
+            users = json.load(f)
+            for u in users:
+                password = hashlib.md5(u["password"].encode("utf-8")).hexdigest()
+                user = User(username=u["username"], password=password, fullname=u["fullname"], role=UserRole[u["role"]])
+                db.session.add(user)
+            db.session.flush()
+        with open("data/customers.json", encoding="utf-8") as f:
+            customers = json.load(f)
+
+            for c in customers:
+                db.session.add(Customer(**c))
+        db.session.commit()
 
 
 

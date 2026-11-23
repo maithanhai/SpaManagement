@@ -1,0 +1,40 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Đăng nhập tài khoản{% endblock %}
+
+{% block content %}
+
+<div class="container col-md-5 col-lg-4">
+
+    <h3 class="text-success text-center mt-4 mb-4">
+        ĐĂNG NHẬP TÀI KHOẢN
+    </h3>
+
+    {% if err_msg %}
+    <div class="alert alert-danger">
+        {{ err_msg }}
+    </div>
+    {% endif %}
+
+    <form method="POST">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Nhập tài khoản" required>
+            <label for="username">Tài khoản</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required>
+            <label for="password">Mật khẩu</label>
+        </div>
+
+        <div class="d-grid">
+            <button type="submit" class="btn btn-success">Đăng nhập</button>
+        </div>
+    </form>
+
+    <p class="text-center mt-3">
+        Chưa có tài khoản?
+        <a href="/register" class="text-success text-decoration-none">Đăng ký</a>
+    </p>
+</div>
+{% endblock %}

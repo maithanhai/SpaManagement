@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Chăm sóc da mặt",
+    "description": "Làm sạch, cấp ẩm và chăm sóc da mặt theo nhu cầu."
+  },
+  {
+    "id": 2,
+    "name": "Chăm sóc cơ thể",
+    "description": "Tẩy tế bào chết, dưỡng ẩm và chăm sóc làn da cơ thể."
+  },
+  {
+    "id": 3,
+    "name": "Massage thư giãn",
+    "description": "Massage toàn thân hoặc từng vùng giúp thư giãn và nghỉ ngơi."
+  },
+  {
+    "id": 4,
+    "name": "Chăm sóc chân",
+    "description": "Ngâm chân, massage và chăm sóc vùng da bàn chân."
+  },
+  {
+    "id": 5,
+    "name": "Gội đầu và chăm sóc tóc",
+    "description": "Gội đầu thư giãn, làm sạch da đầu và dưỡng tóc."
+  },
+  {
+    "id": 6,
+    "name": "Wax lông",
+    "description": "Wax lông và làm dịu da sau dịch vụ."
+  },
+  {
+    "id": 7,
+    "name": "Chăm sóc móng",
+    "description": "Vệ sinh, tạo dáng và làm đẹp móng tay, móng chân."
+  }
+]
