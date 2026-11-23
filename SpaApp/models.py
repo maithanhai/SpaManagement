@@ -7,33 +7,33 @@ from SpaApp import app, db
 from datetime import datetime as dt
 
 class UserRole(enum.Enum):
-    MANAGER = "MANAGER"
-    RECEPTIONIST = "RECEPTIONIST"
-    TECHNICIAN = "TECHNICIAN"
-    CASHIER = "CASHIER"
-    CUSTOMER = "CUSTOMER"
+    MANAGER = 1
+    RECEPTIONIST = 2
+    TECHNICIAN = 3
+    CASHIER = 4
+    CUSTOMER = 5
 
 class BookingChannel(enum.Enum):
-    ONLINE = "ONLINE"
-    WALK_IN = "WALK_IN"
+    ONLINE = 1
+    WALK_IN = 2
 
 class AppointmentStatus(enum.Enum):
-    PENDING = "PENDING"
-    CONFIRMED = "CONFIRMED"
-    IN_PROGRESS = "IN_PROGRESS"
-    COMPLETED = "COMPLETED"
-    CANCELLED = "CANCELLED"
-    NO_SHOW_PENDING = "NO_SHOW_PENDING"
-    NO_SHOW = "NO_SHOW"
+    PENDING = 1
+    CONFIRMED = 2
+    IN_PROGRESS = 3
+    COMPLETED = 4
+    CANCELLED = 5
+    NO_SHOW_PENDING = 6
+    NO_SHOW = 7
 
 class PaymentMethod(enum.Enum):
-    CASH = "CASH"
-    TRANSFER = "TRANSFER"
+    CASH = 1
+    TRANSFER = 2
 
 
 class PaymentStatus(enum.Enum):
-    UNPAID = "UNPAID"
-    PAID = "PAID"
+    UNPAID = 1
+    PAID = 2
 
 class Category(db.Model):
     __tablename__ = "category"
@@ -65,7 +65,7 @@ class User(db.Model, UserMixin):
     username = Column(String(30), nullable=False,unique=True)
     password = Column(String(255), nullable=False)
     fullname = Column(String(45), nullable=False)
-    role = Column(Enum(UserRole), default=UserRole.CUSTOMER)
+    role = Column(Enum(UserRole), default=UserRole.CUSTOMER, nullable=False)
     is_active = Column(Boolean, default=True,nullable=False)
     created_at = Column(DateTime, default=dt.now)
 
