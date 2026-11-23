@@ -1,0 +1,128 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                {% if not current_user.is_authenticated or current_user.role.name == 'CUSTOMER' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Trang chủ</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dịch vụ</a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/">Tất cả dịch vụ</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            {% for c in cates %}
+                            <li>
+                                <a class="dropdown-item" href="/?cate_id={{c.id}}">{{ c.name }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lịch hẹn của tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hóa đơn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Thông báo</a>
+                    </li>
+
+                <!-- Nguoi quan ly -->
+                {% elif current_user.role.name == 'MANAGER' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Báo cáo thống kê</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Danh mục & dịch vụ</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quy định hệ thống</a>
+                    </li>
+                <!-- Le tan -->
+                {% elif current_user.role.name == 'RECEPTIONIST' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tổng quan</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tiếp nhận khách</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Yêu cầu đặt lịch</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quản lý lịch hẹn</a>
+                    </li>
+
+                <!-- Ky thuat vien -->
+                {% elif current_user.role.name == 'TECHNICIAN' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lịch phân công</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tình trạng tiếp nhận khách</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Phiếu dịch vụ</a>
+                    </li>
+
+                <!-- Thu ngan -->
+                {% elif current_user.role.name == 'CASHIER' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lập hóa đơn</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tra cứu hóa đơn</a>
+                    </li>
+
+                {% endif %}
+
+            </ul>
+
+            <!-- Tim kiem -->
+            {% if not current_user.is_authenticated or current_user.role.name == 'CUSTOMER' %}
+            <form class="d-flex me-lg-3 mb-2 mb-lg-0">
+                <!-- Them cate_id hien tai de tim kiem -->
+                {%if request.args.get('cate_id')%}
+                <input type="hidden" name="cate_id" value="{{ request.args.get('cate_id') }}">
+                {%endif%}
+                <input class="form-control me-2" type="text" name="q" placeholder="Tìm kiếm tên dịch vụ...">
+                <button class="btn btn-outline-success" type="submit">Tìm</button>
+            </form>
+            {% endif %}
+
+            <!-- Tai khoan -->
+            {% if current_user.is_authenticated %}
+                <div class="d-flex align-items-center gap-2">
+                    <span class="text-secondary">{{ current_user.full_name }}</span>
+                    <a href="/logout" class="btn btn-outline-danger btn-sm">Đăng xuất</a>
+                </div>
+
+            {% else %}
+                <div class="d-flex gap-2">
+                    <a href="/register" class="btn btn-outline-success">Đăng ký</a>
+                    <a href="/login" class="btn btn-success">Đăng nhập</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</nav>
