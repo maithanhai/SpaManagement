@@ -1,0 +1,50 @@
+{% extends 'layout/base.html'%}
+{% block title%}Thông tin tài khoản{%endblock%}
+{%block content%}
+<div class="container col-md-5 col-lg-4">
+
+    <h3 class="text-success text-center mt-4 mb-4">
+        THÔNG TIN TÀI KHOẢN
+    </h3>
+
+    {% if err_msg %}
+    <div class="alert alert-danger">
+        {{ err_msg }}
+    </div>
+    {%elif suc_msg%}
+    <div class="alert alert-success">
+        {{ suc_msg }}
+    </div>
+    {% endif %}
+
+    <form method="POST">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="username" name="username" value="{{current_user.username}}" disabled>
+            <label for="username">Tài khoản</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="role" name="role" value="{{current_user.role.name}}" disabled>
+            <label for="role">Vai trò</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="fullname" name="fullname" value="{{current_user.fullname}}" required>
+            <label for="fullname">Họ và tên</label>
+        </div>
+        {%if current_user.role.name.__eq__('CUSTOMER')%}
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="phone" name="phone" value="{{phone}}" required>
+            <label for="phone">Số điện thoại</label>
+        </div>
+        {%endif%}
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" name="email" value="{{current_user.email}}" required>
+            <label for="email">Địa chỉ email</label>
+        </div>
+
+        <div class="d-grid">
+            <button type="submit" class="btn btn-success">Lưu thông tin</button>
+        </div>
+    </form>
+</div>
+{%endblock%}

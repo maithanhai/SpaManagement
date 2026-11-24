@@ -4,6 +4,7 @@
     "username": "manager",
     "password": "1",
     "fullname": "Nguyễn Minh Anh",
+    "email": "manager@example.com",
     "role": "MANAGER",
     "is_active": true
   },
@@ -12,6 +13,7 @@
     "username": "receptionist",
     "password": "1",
     "fullname": "Trần Ngọc Linh",
+    "email": "receptionist@example.com",
     "role": "RECEPTIONIST",
     "is_active": true
   },
@@ -20,6 +22,7 @@
     "username": "technician",
     "password": "1",
     "fullname": "Lê Thảo Vy",
+    "email": "technician@example.com",
     "role": "TECHNICIAN",
     "is_active": true
   },
@@ -28,6 +31,7 @@
     "username": "cashier",
     "password": "1",
     "fullname": "Phạm Hoàng Nam",
+    "email": "cashier@example.com",
     "role": "CASHIER",
     "is_active": true
   },
@@ -36,6 +40,7 @@
     "username": "customer",
     "password": "1",
     "fullname": "Võ Mai Phương",
+    "email": "maiphuong@example.com",
     "role": "CUSTOMER",
     "is_active": true
   }

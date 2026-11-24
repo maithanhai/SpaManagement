@@ -67,6 +67,7 @@ class User(db.Model, UserMixin):
     username = Column(String(30), nullable=False,unique=True)
     password = Column(String(255), nullable=False)
     fullname = Column(String(45), nullable=False)
+    email = Column(String(100), nullable=True)
     role = Column(Enum(UserRole), default=UserRole.CUSTOMER, nullable=False)
     is_active = Column(Boolean, default=True,nullable=False)
     created_at = Column(DateTime, default=dt.now)
@@ -80,7 +81,6 @@ class Customer(db.Model):
     user_id = Column(Integer, ForeignKey('user.id'), nullable=True,unique=True)
     fullname = Column(String(45), nullable=False)
     phone = Column(String(30), nullable=False)
-    email = Column(String(100), nullable=True)
     created_at = Column(DateTime, default=dt.now)
 
 class Appointment(db.Model):
@@ -163,7 +163,7 @@ if __name__=='__main__':
             users = json.load(f)
             for u in users:
                 password = hashlib.md5(u["password"].encode("utf-8")).hexdigest()
-                user = User(username=u["username"], password=password, fullname=u["fullname"], role=UserRole[u["role"]])
+                user = User(username=u["username"], password=password, fullname=u["fullname"], email=u.get("email"), role=UserRole[u["role"]])
                 db.session.add(user)
             db.session.flush()
         with open("data/customers.json", encoding="utf-8") as f:
