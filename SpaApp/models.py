@@ -163,7 +163,7 @@ if __name__=='__main__':
             users = json.load(f)
             for u in users:
                 password = hashlib.md5(u["password"].encode("utf-8")).hexdigest()
-                user = User(username=u["username"], password=password, fullname=u["fullname"], role=UserRole[u["role"]])
+                user = User(username=u["username"], password=password, fullname=u["fullname"], email=u.get("email"), role=UserRole[u["role"]])
                 db.session.add(user)
             db.session.flush()
         with open("data/customers.json", encoding="utf-8") as f:
