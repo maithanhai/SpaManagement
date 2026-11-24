@@ -67,6 +67,7 @@ class User(db.Model, UserMixin):
     username = Column(String(30), nullable=False,unique=True)
     password = Column(String(255), nullable=False)
     fullname = Column(String(45), nullable=False)
+    email = Column(String(100), nullable=True)
     role = Column(Enum(UserRole), default=UserRole.CUSTOMER, nullable=False)
     is_active = Column(Boolean, default=True,nullable=False)
     created_at = Column(DateTime, default=dt.now)
@@ -80,7 +81,6 @@ class Customer(db.Model):
     user_id = Column(Integer, ForeignKey('user.id'), nullable=True,unique=True)
     fullname = Column(String(45), nullable=False)
     phone = Column(String(30), nullable=False)
-    email = Column(String(100), nullable=True)
     created_at = Column(DateTime, default=dt.now)
 
 class Appointment(db.Model):
